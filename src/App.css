@@ -1,33 +1,91 @@
-.App {
-  text-align: center;
+.appWrapper {
+  display: flex;
+  justify-content: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  width: 375px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: #F4F6F3;
+}
+
+.app > header {
+  padding: 20px;
+  display: flex;
+  flex: none;
+  justify-content: space-between;
+}
+
+.app > header button {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #F4F6F3;
 }
 
-.App-link {
-  color: #61dafb;
+.app > header .rightBlock button ~ button {
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app > main {
+  flex: 1;
+  padding: 34px 20px 0;
+  background: url(./day.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.app > main h1 {
+  font-size: 18px;
+  color: #204326;
+  margin: 0;
+  text-align: center;
+}
+
+.app > main > p {
+  font-size: 14px;
+  color: #888;
+  margin: 14px 0 34px;
+  text-align: center;
+}
+
+.app > main .newNoteBtn {
+  border: none;
+  background-color: #6A855A;
+  border-radius: 26px;
+  padding: 16px 45px;
+  width: 160px;
+  color: #fff;
+  font-size: 14px;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -80px;
+  cursor: pointer;
+}
+
+.app > main .noteItem {
+  background-color: #fff;
+  padding: 18px 15px 22px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px #00000033;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.app > main .noteItem h2 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: #888;
+}
+
+.app > main .noteItem p {
+  font-size: 13px;
+  margin: 0;
+  color: #555;
 }
